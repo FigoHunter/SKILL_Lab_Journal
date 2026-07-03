@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{报告标题}} · 实验日记</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="booknav">
+    <span class="title">实验分析报告</span>
+    <a href="index.html">↑ 封面 / 目录</a>
+    <span class="spacer"></span>
+    <span class="date-chip">{{YYYY-MM-DD}}</span>
+  </nav>
+
+  <article class="entry report">
+    <div class="ehead">
+      <h2>{{报告标题：能独立读懂}}</h2>
+      <span class="tag ok">已解决</span>
+      <!-- tag ok=已解决 / tag warn=部分结论 / tag open=待跟进 -->
+    </div>
+
+    <h3>摘要</h3>
+    <p>{{3–5 句：做了什么、最重要的 2–3 个数字结论、做出的决策}}</p>
+
+    <h3>背景与动机</h3>
+    <p>{{叙述体：遇到什么问题、为什么做、假设是什么}}</p>
+
+    <h3>过程记录</h3>
+    <ol class="timeline">
+      <li>{{疑问/触发点 → 当时的判断}}</li>
+      <li>{{探索/弯路：错误假设也要写，以及它如何被推翻}}</li>
+      <li>{{再验证手段 → 最终方案 → 执行}}</li>
+    </ol>
+
+    <h3>实验设置</h3>
+    <ul>
+      <li><b>数据</b>：{{路径 + 规模 + 标签组}}</li>
+      <li><b>模型/超参</b>：{{结构、关键超参、什么固定}}</li>
+      <li><b>协议</b>：{{自变量、控制变量、评估集、seeds}}</li>
+    </ul>
+    <pre><code>{{可复制的完整命令}}</code></pre>
+
+    <h3>代码与产物</h3>
+    <ul>
+      <li><code>{{scripts/xxx.py}}</code> — {{做什么}}</li>
+      <li>结果：<code>{{logs/.../results.json}}</code></li>
+    </ul>
+
+    <h3>原始结果</h3>
+    <p>{{全量指标表 mean±std + best 标记}}</p>
+    <table class="res"><tr><th>方法</th><th>指标…</th></tr></table>
+    <p>{{逐 seed 全表（必须）}}</p>
+    <table class="res"><tr><th>seed</th><th>…</th></tr></table>
+
+    <h3>统计分析</h3>
+    <p>{{配对检验表：t、效应量、显著性；稳健性（leave-one-out）；趋势；跨指标一致性}}</p>
+
+    <h3>讨论</h3>
+    <p>{{机制解释、与前序报告呼应、局限与"这组数据不能说明什么"}}</p>
+
+    <h3>结论与决策</h3>
+    <ul>
+      <li>{{带数字的结论}}</li>
+      <li><b>决策</b>：{{做了什么决定及理由}}</li>
+    </ul>
+
+    <h3>遗留问题</h3>
+    <ul class="todo">
+      <li>{{待办}}</li>
+    </ul>
+
+    <h3>相关报告</h3>
+    <p><a href="r{{YYYY-MM-DD_slug}}.html">{{标题}}</a>{{；或"无"}}</p>
+  </article>
+
+  <footer><a href="index.html" style="color:var(--accent)">返回目录</a></footer>
+</div>
+</body>
+</html>
